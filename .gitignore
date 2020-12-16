@@ -1,0 +1,10 @@
+.idea
+.settings
+.project
+.classpath
+*.iml
+*.bat
+out
+gen
+logs
+target
