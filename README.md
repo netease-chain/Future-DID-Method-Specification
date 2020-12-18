@@ -31,7 +31,6 @@ did:future:0x64db3dd38333a852d3783f8da5c9f9c15926174c
 ```
 Algorithm support for key generation:
 - Secp256k1
-- Ed25519
 
 
 ## Future-DID-Document Definition
@@ -46,12 +45,12 @@ The following are the basic fields of our FutureDID document:
     "verificationMethod":[  
         {
             "id":"did:future:0x64db3dd38333a852d3783f8da5c9f9c15926174c#keys-0", 
-            "type":"Secp256k1",
+            "type":"EcdsaSecp256k1VerificationKey2019",
             "publicKeyHex":"69831299193128747476409895200703768919133420816223061693097188765848585"
         }，
         {
             "id":"did:future:0x64db3dd38333a852d3783f8da5c9f9c15926174c#keys-1", 
-            "type":"Secp256k1",
+            "type":"EcdsaSecp256k1VerificationKey2019",
             "publicKeyHex":"02b97c30de767f084ce3080168ee293053ba33b235d7116a3263d29f1450936b71"
         }
     ],
@@ -153,3 +152,6 @@ The process of setting revocation of the invalid DID is as follows:
 - The privacy-related information of FutureDID holders will be stored on the side of the issuing party (the authority) instead of being stored on the blockchain. These privacy attributes can be proved by statements issued by the authority, so as not to be leaked.
 - FutureDID can use private key signature technology to avoid malicious tampering of document.
 - FutureDID can use private key signature technology to prevent malicious tampering of DID document.
+
+## References
+[ECDSA Secp256k1 Signature 2019](https://w3c-ccg.github.io/lds-ecdsa-secp256k1-2019/). O. Steele. W3C. April 2019
